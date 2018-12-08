@@ -10,7 +10,6 @@
 		057C2C3021A5D26E00221B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C2C2F21A5D26E00221B22 /* AppDelegate.swift */; };
 		057C2C3221A5D26E00221B22 /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C2C3121A5D26E00221B22 /* FirebaseViewController.swift */; };
 		057C2C3521A5D26E00221B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057C2C3321A5D26E00221B22 /* Main.storyboard */; };
-		057C2C3721A5D26E00221B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057C2C3621A5D26E00221B22 /* Assets.xcassets */; };
 		057C2C3A21A5D26E00221B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057C2C3821A5D26E00221B22 /* LaunchScreen.storyboard */; };
 		05EB5DF821A5E32800D9CE24 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB5DF721A5E32800D9CE24 /* MapViewController.swift */; };
 		05EB5DFA21A5E3A500D9CE24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB5DF921A5E3A500D9CE24 /* TableViewController.swift */; };
@@ -18,6 +17,11 @@
 		6CEA005B21B9ACB500E3644F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CEA005A21B9ACB400E3644F /* GoogleService-Info.plist */; };
 		6CEA005D21BA035D00E3644F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA005C21BA035D00E3644F /* LoginViewController.swift */; };
 		6CEA005F21BA09A400E3644F /* SelectPokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA005E21BA09A400E3644F /* SelectPokemonTableViewController.swift */; };
+		6CEA006121BA120400E3644F /* PokeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA006021BA120400E3644F /* PokeDetailsViewController.swift */; };
+		6CEA006321BA131500E3644F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA006221BA131500E3644F /* SignUpViewController.swift */; };
+		6CEA006721BA454100E3644F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEA006621BA454100E3644F /* Assets.xcassets */; };
+		6CEA006921BC59DC00E3644F /* MapPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA006821BC59DC00E3644F /* MapPokemonViewController.swift */; };
+		6CEA006B21BC6E7D00E3644F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA006A21BC6E7D00E3644F /* Game.swift */; };
 		A69A599BE3BB28B1BC051681 /* Pods_InClassExercisesStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6F1AC2E4150BE1AF3406D7 /* Pods_InClassExercisesStarter.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +30,6 @@
 		057C2C2F21A5D26E00221B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057C2C3121A5D26E00221B22 /* FirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
 		057C2C3421A5D26E00221B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		057C2C3621A5D26E00221B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		057C2C3921A5D26E00221B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		057C2C3B21A5D26E00221B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05EB5DF721A5E32800D9CE24 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +40,11 @@
 		6CEA005A21B9ACB400E3644F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CEA005C21BA035D00E3644F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6CEA005E21BA09A400E3644F /* SelectPokemonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPokemonTableViewController.swift; sourceTree = "<group>"; };
+		6CEA006021BA120400E3644F /* PokeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailsViewController.swift; sourceTree = "<group>"; };
+		6CEA006221BA131500E3644F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6CEA006621BA454100E3644F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CEA006821BC59DC00E3644F /* MapPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPokemonViewController.swift; sourceTree = "<group>"; };
+		6CEA006A21BC6E7D00E3644F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		922D9DFDF5A7E8609903DE7F /* Pods-InClassExercisesStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InClassExercisesStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-InClassExercisesStarter/Pods-InClassExercisesStarter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,15 +81,19 @@
 		057C2C2E21A5D26E00221B22 /* InClassExercisesStarter */ = {
 			isa = PBXGroup;
 			children = (
+				6CEA006621BA454100E3644F /* Assets.xcassets */,
 				057C2C2F21A5D26E00221B22 /* AppDelegate.swift */,
 				057C2C3121A5D26E00221B22 /* FirebaseViewController.swift */,
-				057C2C3321A5D26E00221B22 /* Main.storyboard */,
 				6CEA005E21BA09A400E3644F /* SelectPokemonTableViewController.swift */,
+				6CEA006021BA120400E3644F /* PokeDetailsViewController.swift */,
 				6CEA005C21BA035D00E3644F /* LoginViewController.swift */,
+				057C2C3321A5D26E00221B22 /* Main.storyboard */,
+				6CEA006821BC59DC00E3644F /* MapPokemonViewController.swift */,
+				6CEA006A21BC6E7D00E3644F /* Game.swift */,
+				6CEA006221BA131500E3644F /* SignUpViewController.swift */,
 				05FBB3B921A62876005CACC3 /* JSONViewController.swift */,
 				05EB5DF921A5E3A500D9CE24 /* TableViewController.swift */,
 				05EB5DF721A5E32800D9CE24 /* MapViewController.swift */,
-				057C2C3621A5D26E00221B22 /* Assets.xcassets */,
 				057C2C3821A5D26E00221B22 /* LaunchScreen.storyboard */,
 				6CEA005A21B9ACB400E3644F /* GoogleService-Info.plist */,
 				057C2C3B21A5D26E00221B22 /* Info.plist */,
@@ -169,7 +181,7 @@
 			files = (
 				057C2C3A21A5D26E00221B22 /* LaunchScreen.storyboard in Resources */,
 				6CEA005B21B9ACB500E3644F /* GoogleService-Info.plist in Resources */,
-				057C2C3721A5D26E00221B22 /* Assets.xcassets in Resources */,
+				6CEA006721BA454100E3644F /* Assets.xcassets in Resources */,
 				057C2C3521A5D26E00221B22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +262,10 @@
 				057C2C3021A5D26E00221B22 /* AppDelegate.swift in Sources */,
 				6CEA005F21BA09A400E3644F /* SelectPokemonTableViewController.swift in Sources */,
 				05FBB3BA21A62876005CACC3 /* JSONViewController.swift in Sources */,
+				6CEA006B21BC6E7D00E3644F /* Game.swift in Sources */,
+				6CEA006321BA131500E3644F /* SignUpViewController.swift in Sources */,
+				6CEA006921BC59DC00E3644F /* MapPokemonViewController.swift in Sources */,
+				6CEA006121BA120400E3644F /* PokeDetailsViewController.swift in Sources */,
 				05EB5DFA21A5E3A500D9CE24 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

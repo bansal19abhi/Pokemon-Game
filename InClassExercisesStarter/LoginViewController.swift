@@ -23,12 +23,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //self.loginButton(_ <#T##sender: Any##Any#>).layer.cornerRadius = [Your Value]
 
         // Do any additional setup after loading the view.
     }
     
     
     @IBAction func loginButton(_ sender: Any) {
+        
+       
         
         print ("User pressed the login button!!")
         
@@ -65,7 +69,7 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "selectPokemonSegue" {
+        if segue.identifier == "segueHome" {
             let n1 = segue.destination as! SelectPokemonTableViewController
             n1.username = name
             print("name has ben sent to next screen")
