@@ -21,7 +21,6 @@
 		6CEA006321BA131500E3644F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA006221BA131500E3644F /* SignUpViewController.swift */; };
 		6CEA006721BA454100E3644F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEA006621BA454100E3644F /* Assets.xcassets */; };
 		6CEA006921BC59DC00E3644F /* MapPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA006821BC59DC00E3644F /* MapPokemonViewController.swift */; };
-		6CEA006B21BC6E7D00E3644F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA006A21BC6E7D00E3644F /* Game.swift */; };
 		A69A599BE3BB28B1BC051681 /* Pods_InClassExercisesStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6F1AC2E4150BE1AF3406D7 /* Pods_InClassExercisesStarter.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		6CEA006221BA131500E3644F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6CEA006621BA454100E3644F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CEA006821BC59DC00E3644F /* MapPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPokemonViewController.swift; sourceTree = "<group>"; };
-		6CEA006A21BC6E7D00E3644F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		922D9DFDF5A7E8609903DE7F /* Pods-InClassExercisesStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InClassExercisesStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-InClassExercisesStarter/Pods-InClassExercisesStarter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +87,6 @@
 				6CEA005C21BA035D00E3644F /* LoginViewController.swift */,
 				057C2C3321A5D26E00221B22 /* Main.storyboard */,
 				6CEA006821BC59DC00E3644F /* MapPokemonViewController.swift */,
-				6CEA006A21BC6E7D00E3644F /* Game.swift */,
 				6CEA006221BA131500E3644F /* SignUpViewController.swift */,
 				05FBB3B921A62876005CACC3 /* JSONViewController.swift */,
 				05EB5DF921A5E3A500D9CE24 /* TableViewController.swift */,
@@ -262,7 +259,6 @@
 				057C2C3021A5D26E00221B22 /* AppDelegate.swift in Sources */,
 				6CEA005F21BA09A400E3644F /* SelectPokemonTableViewController.swift in Sources */,
 				05FBB3BA21A62876005CACC3 /* JSONViewController.swift in Sources */,
-				6CEA006B21BC6E7D00E3644F /* Game.swift in Sources */,
 				6CEA006321BA131500E3644F /* SignUpViewController.swift in Sources */,
 				6CEA006921BC59DC00E3644F /* MapPokemonViewController.swift in Sources */,
 				6CEA006121BA120400E3644F /* PokeDetailsViewController.swift in Sources */,
