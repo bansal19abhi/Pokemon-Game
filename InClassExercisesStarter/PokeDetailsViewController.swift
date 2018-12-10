@@ -12,6 +12,7 @@ import Alamofire
 import SwiftyJSON
 import CoreLocation
 import  MapKit
+import ImageIO
 
 class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
     
@@ -49,6 +50,8 @@ class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      // self.pokemonImage.loadGif(name: images)
 
         db = Firestore.firestore()
         if UserDefaults.standard.object(forKey: "lat") != nil
@@ -95,7 +98,9 @@ class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
                     self.actionMessage.text! = "\(action)"
                     
                     print(self.rowImage)
-                    self.pokemonImage.image = UIImage(named: self.rowImage)
+                    //self.pokemonImage.image = UIImage(named: self.rowImage)
+                    self.pokemonImage.loadGif(name: self.rowImage)
+                    //self.pokemonImage.loadGif(name: images)
                 }
             }
             else if let err = err {

@@ -20,10 +20,11 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
     //set value of l into user defaults
     var db:Firestore!
     var items = ["Eevee", "Pikachu", "Squirtle","Charmander","Balbasaur"]
-    var images = ["eevee.png", "pikachu.png", "squirtle.png","charmander.png","balbasaur.png"]
+    var images = ["eevee","pika","squirtle","charmander","bulbasaur"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         
         db = Firestore.firestore()
         //        if UserDefaults.standard.object(forKey: "lat") != nil
         //        {
