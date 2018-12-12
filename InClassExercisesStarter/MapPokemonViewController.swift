@@ -29,7 +29,6 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
         r.span.longitudeDelta = r.span.longitudeDelta / 3
         print("New zoom: \(r.span.latitudeDelta)")
         print("________________")
-        self.mapView.setRegion(r, animated: true)
     }
     
     @IBAction func zoomoutButton(_ sender: Any) {
@@ -44,7 +43,7 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
         r.span.longitudeDelta = r.span.longitudeDelta * 2
         print("New zoom: \(r.span.latitudeDelta)")
         print("-------")
-        self.mapView.setRegion(r, animated: true)
+        
     }
     
     
