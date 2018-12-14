@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import MapKit
+import CoreLocation
+import FirebaseFirestore
 
-class OpponentViewController: UIViewController {
+class OpponentViewController: UIViewController, CLLocationManagerDelegate{
     
+    var db:Firestore!
+    var rowImage = ""
     @IBOutlet weak var myExp: UILabel!
     @IBOutlet weak var money: UILabel!
     @IBOutlet weak var attack1: UILabel!
@@ -29,6 +36,15 @@ class OpponentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
+        
+        
+        
+        
+        
+        
+        
+        
         
         // Static
         var  pikacpu = UserDefaults.standard.string(forKey: "pokName")
@@ -39,15 +55,87 @@ class OpponentViewController: UIViewController {
         
         pokemonName.text = cpupokename
         
-        if (cpupokename == "CHARMANDER"){
-            print("charmander")
-        }
-        attack1.text = String(attackName[0])
-        attack2.text = String(attackName[1])
-        attack3.text = String(attackName[2])
-        Defence.text = String(defence[0])
         
-    }
+        
+        if (cpupokename == "PIKACHU"){
+            self.pokemonImage.loadGif(name: "pika")
+        }
+        
+        if (cpupokename == "EEVEE"){
+            self.pokemonImage.loadGif(name: "eevee")
+        }
+        
+        if (cpupokename == "BULBASAUR"){
+            self.pokemonImage.loadGif(name: "bulbasaur")
+        }
+        
+        if (cpupokename == "CHARMANDER"){
+            self.pokemonImage.loadGif(name: "charmander")
+        }
+        
+        if (cpupokename == "SQUIRTLE"){
+            self.pokemonImage.loadGif(name: "squirtle")
+        }
+            /*let chatRef = db.collection("Pokemon Map")
+            chatRef.document("CHARMANDER").getData([
+                "attack1": self.attack1.text!,
+                "attack2": self.attack2.text!,
+                "attack3": self.attack3.text!,
+                "defence": self.Defence.text!,
+                ])
+            print("Message sent!")*/
+            
+            
+            
+            let resRef = db.collection("Pokemon Map").whereField("Name", isEqualTo: cpupokename)
+            print("Querying database")
+            resRef.getDocuments() {
+                (snapshot, error) in
+                
+                if (error != nil) {
+                    print("Error getting results from query")
+                }
+                else {
+                    print("Got something!")
+                    print("Num items in database matching query: \(snapshot!.count)")
+                    //print("Name: \(snapsho)")
+                    
+                    
+                    for document in snapshot!.documents {
+                        
+                        let data = document.data()
+                        let attack01 = data["Attack1"] as! Int
+                        let attack02 = data["Attack2"] as! Int
+                        let attack03 = data["Attack3"] as! Int
+                        let defence = data["Defence"] as! Int
+                        
+                        
+                        print("\(document.documentID) => \(attack01)")
+                        self.attack1.text! = "\(attack01)"
+                        
+                        print("\(document.documentID) => \(attack02)")
+                        self.attack2.text! = "\(attack02)"
+                        
+                        print("\(document.documentID) => \(attack03)")
+                        self.attack3.text! = "\(attack03)"
+                        
+                        print("\(document.documentID) => \(defence)")
+                        self.Defence.text! = "\(defence)"
+                        
+                        
+                    
+                        
+                        
+                        
+                        //print("\(document.documentID) => \(name)")
+                        //self.sucessMessage.text! = "\(name)"
+        }
+                }
+            }
+    
+    
+        
+    
     
 
     /*
@@ -60,4 +148,5 @@ class OpponentViewController: UIViewController {
     }
     */
 
+}
 }

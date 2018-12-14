@@ -94,7 +94,7 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
         // 3. OPTIONAL: add a information popup (a "bubble")
         pin.title = "PIKACHU"
         let pokemonn = db.collection("Pokemon Map")
-        pokemonn.document(pin.title!).setData([
+        pokemonn.document().setData([
             
             "Name" : pin.title,
             "Lat" : lat1,
@@ -117,7 +117,7 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
         pin2.coordinate = CLLocationCoordinate2DMake(lat2, long2)
         self.mapView.addAnnotation(pin2)
         pin2.title = "BULBASAUR"
-        pokemonn.document(pin2.title!).setData([
+        pokemonn.document().setData([
             "Name" : pin2.title,
             "Lat" : lat2,
             "Long": long2,
@@ -133,7 +133,7 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
         pin3.coordinate = CLLocationCoordinate2DMake(lat3, long3)
         self.mapView.addAnnotation(pin3)
         pin3.title = "EEVEE"
-        pokemonn.document(pin3.title!).setData([
+        pokemonn.document().setData([
             "Name" : pin3.title,
             "Lat" : lat3,
             "Long": long3,
@@ -150,7 +150,7 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
         pin4.coordinate = CLLocationCoordinate2DMake(lat4, long4)
         self.mapView.addAnnotation(pin4)
         pin4.title = "CHARMANDER"
-        pokemonn.document(pin4.title!).setData([
+        pokemonn.document().setData([
             "Name" : pin4.title,
             "Lat" : lat4,
             "Long": long4,
@@ -167,7 +167,7 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
         pin5.coordinate = CLLocationCoordinate2DMake(lat5, long5)
         self.mapView.addAnnotation(pin5)
         pin5.title = "SQUIRTLE"
-        pokemonn.document(pin5.title!).setData([
+        pokemonn.document().setData([
             "Name" : pin5.title,
             "Lat" : lat5,
             "Long": long5,
