@@ -26,14 +26,22 @@ class OpponentViewController: UIViewController {
     
     
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Static
+        var  pikacpu = UserDefaults.standard.string(forKey: "pokName")
         
-        pokemonName.text = pokemon[0]
+        var cpupokename = pikacpu as! String
+        print(cpupokename)
+        
+        
+        pokemonName.text = cpupokename
+        
+        if (cpupokename == "CHARMANDER"){
+            print("charmander")
+        }
         attack1.text = String(attackName[0])
         attack2.text = String(attackName[1])
         attack3.text = String(attackName[2])
