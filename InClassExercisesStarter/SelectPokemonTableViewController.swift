@@ -127,32 +127,43 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
         pokemon.document("Eevee").setData([
             "name": "Eevee",
             "Health Point": 140,
-            "defence": 10,
-            "action": 10
+            "defence": 5,
+            "attack1": 20,
+            "attack2": 28,
+            "attack3": 21
             ])
         pokemon.document("Pikachu").setData([
             "name": "Pikachu",
             "Health Point": 110,
-            "defence": 15,
-            "action": 5
+            "defence": 7,
+            "attack1": 15,
+            "attack2": 24,
+            "attack3": 31
             ])
         pokemon.document("Squirtle").setData([
             "name": "Squirtle",
             "Health Point": 100,
-            "defence": 25,
-            "action": 5
+            "defence": 6,
+            "attack1": 35,
+            "attack2": 28,
+            "attack3": 11
             ])
         pokemon.document("Charmander").setData([
             "name": "Charmander",
             "Health Point": 110,
-            "defence": 15,
-            "action": 4
+            "defence": 9,
+            "attack1": 34,
+            "attack2": 28,
+            "attack3": 24
+            
             ])
         pokemon.document("Balbasaur").setData([
             "name": "Balbasaur",
             "Health Point": 80,
-            "defence": 35,
-            "action": 4
+            "defence": 10,
+            "attack1": 34,
+            "attack2": 18,
+            "attack3": 23
             ])
     }
     //    func  UserData() {

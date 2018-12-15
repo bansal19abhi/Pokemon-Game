@@ -99,10 +99,10 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
             "Name" : pin.title,
             "Lat" : lat1,
             "Long": long1,
-            "Attack1" : 50,
-            "Attack2" : 30,
-            "Attack3" : 45,
-            
+            "Attack1" : 30,
+            "Attack2" : 20,
+            "Attack3" : 25,
+            "Health Point" : 140,
             "Defence" : 10
             
             ])
@@ -121,10 +121,11 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
             "Name" : pin2.title,
             "Lat" : lat2,
             "Long": long2,
-            "Attack1" : 80,
+            "Attack1" : 40,
             "Attack2" : 20,
-            "Attack3" : 55,
-            "Defence" : 7
+            "Attack3" : 15,
+            "Defence" : 7,
+            "Health Point" : 110
             ])
         
         let pin3 = MKPointAnnotation()
@@ -137,10 +138,11 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
             "Name" : pin3.title,
             "Lat" : lat3,
             "Long": long3,
-            "Attack1" : 75,
-            "Attack2" : 50,
-            "Attack3" : 65,
-            "Defence" : 0
+            "Attack1" : 15,
+            "Attack2" : 30,
+            "Attack3" : 25,
+            "Defence" : 4,
+            "Health Point" : 140
             ])
         
         
@@ -154,10 +156,11 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
             "Name" : pin4.title,
             "Lat" : lat4,
             "Long": long4,
-            "Attack1" : 105,
+            "Attack1" : 25,
             "Attack2" : 20,
-            "Attack3" : 85,
-            "Defence" : 20
+            "Attack3" : 15,
+            "Defence" : 6,
+            "Health Point" : 100
             ])
         
         
@@ -171,10 +174,11 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
             "Name" : pin5.title,
             "Lat" : lat5,
             "Long": long5,
-            "Attack1" : 150,
-            "Attack2" : 100,
-            "Attack3" : 125,
-            "Defence" : 50
+            "Attack1" : 15,
+            "Attack2" : 10,
+            "Attack3" : 25,
+            "Defence" : 4,
+            "Health Point" : 155
             ])
         
     }

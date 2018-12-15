@@ -36,8 +36,16 @@ class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
     
     @IBOutlet weak var actionMessage: UILabel!
     
+    
+    @IBOutlet weak var attack2: UILabel!
+    
+    
+    @IBOutlet weak var attack3: UILabel!
+    
     @IBOutlet weak var defenceMessage: UILabel!
     @IBAction func buttonSelectPokemon(_ sender: Any) {
+        
+        
         
         db = Firestore.firestore()
         
@@ -68,6 +76,11 @@ class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
         // ask for permission to get the location
         manager.requestAlwaysAuthorization()
         
+        UserDefaults.standard.set(self.pokemonName, forKey: "userpoke")
+
+        
+      
+        
         // tell the manager to get the person's location
         manager.startUpdatingLocation()
         let ref = db.collection("Pokemon").whereField("name", isEqualTo: self.pokemonName)
@@ -80,7 +93,10 @@ class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
                     let name = data["name"] as! String
                     let hp = data["Health Point"] as! Int
                     let defence = data["defence"] as! Int
-                    let action = data["action"] as! Int
+                    let action = data["attack1"] as! Int
+                    let attack2 = data["attack2"] as! Int
+                    let attack3 = data["attack3"] as! Int
+                   
                     
                     
                     
@@ -96,6 +112,14 @@ class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
                     
                     print("\(document.documentID) => \(action)")
                     self.actionMessage.text! = "\(action)"
+                    
+                    print("\(document.documentID) => \(attack2)")
+                    self.attack2.text! = "\(attack2)"
+                    
+                    print("\(document.documentID) => \(attack3)")
+                    self.attack3.text! = "\(attack3)"
+                    
+                    
                     
                     print(self.rowImage)
                     //self.pokemonImage.image = UIImage(named: self.rowImage)
@@ -131,8 +155,8 @@ class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
         let user = db.collection("users")
         
         
-        latitude = latitude + l
-        longitude = longitude - l
+        //latitude = latitude + l
+        //longitude = longitude - l
         let userDefaults = UserDefaults.standard
         userDefaults.setValue(latitude, forKey: "lat")
         userDefaults.setValue(longitude, forKey: "lng")
