@@ -130,7 +130,9 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "defence": 5,
             "attack1": 20,
             "attack2": 28,
-            "attack3": 21
+            "attack3": 21,
+            "level":1,
+            "money":40
             ])
         pokemon.document("Pikachu").setData([
             "name": "Pikachu",
@@ -138,7 +140,9 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "defence": 7,
             "attack1": 15,
             "attack2": 24,
-            "attack3": 31
+            "attack3": 31,
+            "level":1,
+            "money":100
             ])
         pokemon.document("Squirtle").setData([
             "name": "Squirtle",
@@ -146,7 +150,9 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "defence": 6,
             "attack1": 35,
             "attack2": 28,
-            "attack3": 11
+            "attack3": 11,
+            "level":1,
+            "money":90
             ])
         pokemon.document("Charmander").setData([
             "name": "Charmander",
@@ -154,7 +160,9 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "defence": 9,
             "attack1": 34,
             "attack2": 28,
-            "attack3": 24
+            "attack3": 24,
+            "level":1,
+            "money":180
             
             ])
         pokemon.document("Balbasaur").setData([
@@ -163,7 +171,9 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "defence": 10,
             "attack1": 34,
             "attack2": 18,
-            "attack3": 23
+            "attack3": 23,
+            "level":1,
+            "money":110
             ])
     }
     //    func  UserData() {

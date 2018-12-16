@@ -899,9 +899,6 @@
                                     <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="gMM-ag-0zx" kind="show" id="n4J-Ru-Dxh"/>
-                                </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Xjj-aa-dXu">
                                 <rect key="frame" x="156" y="378" width="239" height="3"/>
@@ -970,11 +967,89 @@
                         <outlet property="userImage" destination="rL1-Mz-ZWp" id="0Js-xh-P7Z"/>
                         <outlet property="userLabel2" destination="bhw-IJ-8Xt" id="W8n-ax-g8f"/>
                         <outlet property="userPokemon" destination="ntF-dE-1uV" id="YKZ-Rc-Spl"/>
+                        <segue destination="gMM-ag-0zx" kind="show" identifier="xyz" id="xba-CY-NCf"/>
+                        <segue destination="6yO-DE-BYB" kind="show" identifier="congo" id="JyM-Zk-13c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oI-iw-5my" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6737.68115942029" y="-646.20535714285711"/>
+        </scene>
+        <!--Congo View Controller-->
+        <scene sceneID="54i-TK-yQ1">
+            <objects>
+                <viewController id="6yO-DE-BYB" customClass="CongoViewController" customModule="InClassExercisesStarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRk-lM-S2k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONGRATULATIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v50-Ci-ede">
+                                <rect key="frame" x="22" y="139" width="371" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0F-bY-dET">
+                                <rect key="frame" x="20" y="299" width="373" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU WON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-kK-0WH">
+                                <rect key="frame" x="114" y="214" width="185" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ6-Ds-f3h">
+                                <rect key="frame" x="22" y="567" width="371" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Level 2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="level2:" destination="6yO-DE-BYB" eventType="touchUpInside" id="EAI-97-7K9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMh-0J-leW">
+                                <rect key="frame" x="21" y="654" width="371" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="mainMenu:" destination="6yO-DE-BYB" eventType="touchUpInside" id="o8v-zz-BMt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xR4-Fp-Pz9">
+                                <rect key="frame" x="16" y="735" width="371" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOut:" destination="6yO-DE-BYB" eventType="touchUpInside" id="Acn-Nk-K0q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eeg-l9-cE6"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageCongo" destination="c0F-bY-dET" id="uep-Db-7c8"/>
+                        <segue destination="K2n-Tv-HWM" kind="show" identifier="logout" id="YIi-GL-gDT"/>
+                        <segue destination="UU0-rk-V3h" kind="show" identifier="mainmenu" id="a9i-1X-yxn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYQ-7A-brU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4217" y="271"/>
         </scene>
         <!--Runaway View Controller-->
         <scene sceneID="baR-Dc-rVd">
@@ -1075,4 +1150,8 @@
         <image name="zoomin" width="75" height="75"/>
         <image name="zoomout" width="75" height="75"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="a9i-1X-yxn"/>
+        <segue reference="YIi-GL-gDT"/>
+    </inferredMetricsTieBreakers>
 </document>

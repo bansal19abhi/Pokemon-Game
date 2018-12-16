@@ -1,41 +1,41 @@
 //
-//  RunawayViewController.swift
+//  CongoViewController.swift
 //  InClassExercisesStarter
 //
-//  Created by Abhishek Bansal on 10/12/18.
+//  Created by Abhishek Bansal on 16/12/18.
 //  Copyright © 2018 room1. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import MapKit
-import CoreLocation
 import FirebaseFirestore
+import Firebase
 
-class RunawayViewController: UIViewController {
+class CongoViewController: UIViewController {
+
+    @IBOutlet weak var imageCongo: UIImageView!
     
-     var db:Firestore!
-    
-    @IBOutlet weak var MyExp: UILabel!
-    @IBOutlet weak var Money: UILabel!
-    @IBOutlet weak var Health: UILabel!
-    
-    
-    @IBAction func healPokemon(_ sender: Any) {
-        print("hospital button pressed")
-        print("Get Data pressed!")
-        
-        
-        
-        
-        
-        
+    @IBAction func level2(_ sender: Any) {
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func mainMenu(_ sender: Any) {
+        print("Go to main menu pressed")
+        self.performSegue(withIdentifier: "mainmenu", sender: nil)
+    }
+    
+    @IBAction func logOut(_ sender: Any) {
+        print("Logout button pressed")
         
+        
+        
+       
+    }
+    
+    
+    override func viewDidLoad() {
+        print("Loaded the congratulations screen")
+        super.viewDidLoad()
+        self.imageCongo.loadGif(name: "congro")
+
         // Do any additional setup after loading the view.
     }
     

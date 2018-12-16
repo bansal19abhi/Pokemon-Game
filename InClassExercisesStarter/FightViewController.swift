@@ -60,6 +60,7 @@ class FightViewController: UIViewController {
     var r = 0
     var bc = ""
     
+    
     var cpuattack1Count = 0
     var cpuattack2Count = 0
     var cpuattack3Count = 0
@@ -72,9 +73,11 @@ class FightViewController: UIViewController {
     var userhealthPointCount = 0
     var userdefenceCount = 0
     
+    var level = 1
+    var money = 0
     
-    
-    
+    let randomNum:UInt32 = arc4random_uniform(100)
+   // var up = userpokemon
     
     
     
@@ -331,6 +334,13 @@ class FightViewController: UIViewController {
             var ab = (cpuhealthPointCount - userattack2Count) + cpudefenceCount
             self.cpuhealthPointCount = ab
             print("CPU health: " , ab)
+            
+           
+            
+            
+            
+            
+            
             enemyfight()
         }
     }
@@ -362,11 +372,51 @@ class FightViewController: UIViewController {
         
         if (cpuhealthPointCount < 0){
             
-            let message = "Enemy's Health Point is 0"
+            
+            var  pikauser = UserDefaults.standard.string(forKey: "userpoke")
+            
+            var up = pikauser as! String
+            /*let message = "Enemy's Health Point is 0"
             let infoAlert = UIAlertController(title: "Congratulations.YOU WON", message: message, preferredStyle: .alert)
             infoAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-            self.present(infoAlert, animated: true, completion: nil)
+            self.present(infoAlert, animated: true, completion: nil)*/
             Result.text = "YOU WON"
+            level = level + 1
+            var n = up
+            
+            let ref = db.collection("Pokemon").whereField("name", isEqualTo: n)
+            ref.getDocuments() {
+                (querySnapshot, err) in
+                if (err == nil){
+                    for document in querySnapshot!.documents {
+                        let data = document.data()
+                        let money = data["money"] as! Int
+            
+                    }
+                }
+            }
+            
+            
+            print("Money before:",self.money)
+            money = money + Int(randomNum)
+            if (money >= 200)
+            {
+                money = money - 60
+            }
+            
+            let user = db.collection("Pokemon").document(n).updateData([
+                "level" : level,
+                "money" : money
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Level Updated",self.level)
+                    print("Money Now",self.money)
+                    
+                }
+            }
+            self.performSegue(withIdentifier: "congo", sender: nil)
             
             
         }
@@ -378,10 +428,27 @@ class FightViewController: UIViewController {
         self.userhealthPointCount = xz
         print("user health: " , xz)
             
-            let message = "Enemy has done his turn. It's your time to attack."
-            let infoAlert = UIAlertController(title: "ATTACK", message: message, preferredStyle: .alert)
-            infoAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(infoAlert, animated: true, completion: nil)
+            
+            
+            
+            let alert = UIAlertController(title: "Your Attack", message: "Attacking Enemy. Please wait...", preferredStyle: .alert)
+            
+            alert.view.tintColor = UIColor.black
+            let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 10,y: 5,width: 50, height: 50)) as UIActivityIndicatorView
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            loadingIndicator.startAnimating();
+            
+            alert.view.addSubview(loadingIndicator)
+            
+            self.present(alert, animated: true) {
+                self.dismiss(animated: true, completion: {
+                    let message = "Enemy has done his turn. It's your time to attack."
+                    let alert2 = UIAlertController(title: "Attack", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                    alert2.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert2, animated: true, completion: nil)
+                })
+            }
             
         }
     }
