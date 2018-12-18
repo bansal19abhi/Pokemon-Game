@@ -11,8 +11,17 @@ import FirebaseFirestore
 import Firebase
 
 class CongoViewController: UIViewController {
+    
+    var db:Firestore!
 
     @IBOutlet weak var imageCongo: UIImageView!
+    
+    @IBOutlet weak var healthLabel: UILabel!
+    
+    @IBOutlet weak var levelLabel: UILabel!
+    
+    @IBOutlet weak var moneyLabel: UILabel!
+    
     
     @IBAction func level2(_ sender: Any) {
         
@@ -34,11 +43,19 @@ class CongoViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
+        db = Firestore.firestore()
         print("Loaded the congratulations screen")
+        
         super.viewDidLoad()
         self.imageCongo.loadGif(name: "congro")
 
-        // Do any additional setup after loading the view.
+
+        
+        
+        
+        
+        
     }
     
 

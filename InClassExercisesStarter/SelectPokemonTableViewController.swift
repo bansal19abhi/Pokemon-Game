@@ -23,6 +23,7 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
     var images = ["eevee","pika","squirtle","charmander","bulbasaur"]
     
     override func viewDidLoad() {
+        self.navigationItem.title = "Select your Pokemon"
         super.viewDidLoad()
          
         db = Firestore.firestore()
