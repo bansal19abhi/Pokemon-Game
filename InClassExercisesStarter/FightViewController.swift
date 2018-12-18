@@ -480,7 +480,20 @@ class FightViewController: UIViewController {
         
         print("Hospital button pressed")
         
-        
+        if (userhealthPointCount <= 0){
+            let message = "Your Health Point is 0. Hence you are in Hospital."
+            let infoAlert = UIAlertController(title: "You can gain HP in Hospital!", message: message, preferredStyle: .alert)
+            infoAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            self.present(infoAlert, animated: true, completion: nil)
+            Result.text = "Yout are in Hospital now."
+        }
+        else{
+            var ab = (cpuhealthPointCount - userattack1Count) + cpudefenceCount
+            self.cpuhealthPointCount = ab
+            print("CPU health: " , ab)
+            cpuLabelBar.text = String(ab)
+            enemyfight()
+        }
        
     }
     
