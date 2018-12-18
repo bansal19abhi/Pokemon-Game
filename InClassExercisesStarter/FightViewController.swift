@@ -494,7 +494,7 @@ class FightViewController: UIViewController {
             cpuLabelBar.text = String(ab)
             enemyfight()
         }
-       
+    
     }
     
     
