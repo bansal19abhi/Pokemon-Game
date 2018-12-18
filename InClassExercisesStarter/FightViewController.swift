@@ -25,8 +25,7 @@ class FightViewController: UIViewController {
     @IBOutlet weak var enemyLabel1: UILabel!
     @IBOutlet weak var Result: UILabel!
     
-    @IBOutlet weak var cpuHealth: UIProgressView!
-    @IBOutlet weak var userHealth: UIProgressView!
+    
     
     @IBOutlet weak var CpuAttack1: UILabel!
     @IBOutlet weak var CpuAttack2: UILabel!
@@ -79,7 +78,9 @@ class FightViewController: UIViewController {
     let randomNum:UInt32 = arc4random_uniform(100)
    // var up = userpokemon
     
+    @IBOutlet weak var cpuLabelBar: UILabel!
     
+    @IBOutlet weak var userLabelBar: UILabel!
     
     
     override func viewDidLoad() {
@@ -89,6 +90,10 @@ class FightViewController: UIViewController {
         db = Firestore.firestore()
         //let user = db.collection("users").document(Auth.auth().currentUser!.email!).documen
         //UserData()
+       // UserDefaults.standard.set(self.pokemonName, forKey: "userpoke")
+        
+        
+        
         
         //______________________ENEMY______________________
         
@@ -249,11 +254,7 @@ class FightViewController: UIViewController {
             
         }
         
-        cpuHealth.progress = progressValue
-        
-        userHealth.transform = userHealth.transform.scaledBy(x: 1, y: 15)
-        
-        cpuHealth.transform = cpuHealth.transform.scaledBy(x: 1, y: 15)
+       
     }
     
     
@@ -275,7 +276,7 @@ class FightViewController: UIViewController {
         
         print("Attack 1 button is pressed")
         
-        if (userhealthPointCount < 0){
+        if (userhealthPointCount <= 0){
             let message = "Your Health Point is 0. Click on Hospital to gain your Health."
             let infoAlert = UIAlertController(title: "Attack Failed!", message: message, preferredStyle: .alert)
             infoAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
@@ -286,6 +287,7 @@ class FightViewController: UIViewController {
         var ab = (cpuhealthPointCount - userattack1Count) + cpudefenceCount
         self.cpuhealthPointCount = ab
         print("CPU health: " , ab)
+            cpuLabelBar.text = String(ab)
             enemyfight()
         }
         
@@ -323,7 +325,7 @@ class FightViewController: UIViewController {
         
         print("Attack 2 button is pressed")
         
-        if (userhealthPointCount < 0 ){
+        if (userhealthPointCount <= 0 ){
             let message = "Your Health Point is 0. Click on Hospital to gain your Health."
             let infoAlert = UIAlertController(title: "Attack Failed!", message: message, preferredStyle: .alert)
             infoAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
@@ -334,7 +336,7 @@ class FightViewController: UIViewController {
             var ab = (cpuhealthPointCount - userattack2Count) + cpudefenceCount
             self.cpuhealthPointCount = ab
             print("CPU health: " , ab)
-            
+            cpuLabelBar.text = String(ab)
            
             
             
@@ -352,7 +354,7 @@ class FightViewController: UIViewController {
         
        
         
-        if ( userhealthPointCount < 0){
+        if ( userhealthPointCount <= 0){
             let message = "Your Health Point is 0. Click on Hospital to gain your Health."
             let infoAlert = UIAlertController(title: "Attack Failed!", message: message, preferredStyle: .alert)
             infoAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
@@ -363,6 +365,7 @@ class FightViewController: UIViewController {
             var ab = (cpuhealthPointCount - userattack3Count) + cpudefenceCount
             self.cpuhealthPointCount = ab
             print("CPU health: " , ab)
+            cpuLabelBar.text = String(ab)
             enemyfight()
         }
     }
@@ -370,7 +373,7 @@ class FightViewController: UIViewController {
     
     func enemyfight() {
         
-        if (cpuhealthPointCount < 0){
+        if (cpuhealthPointCount <= 0){
             
             
             var  pikauser = UserDefaults.standard.string(forKey: "userpoke")
@@ -426,6 +429,7 @@ class FightViewController: UIViewController {
         
         var xz = (userhealthPointCount - cpuattack1Count) + userdefenceCount
         self.userhealthPointCount = xz
+            userLabelBar.text = String(xz)
         print("user health: " , xz)
             
             
@@ -453,6 +457,11 @@ class FightViewController: UIViewController {
         }
     }
     
+    @IBAction func runAwayButton(_ sender: Any) {
+    
+        self.performSegue(withIdentifier: "xyz", sender: nil)
+    
+    }
     
     
     func  UserData() {
@@ -465,14 +474,20 @@ class FightViewController: UIViewController {
         
        //print(user.pokemon)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func hospitalButton(_ sender: Any) {
+        
+        print("Hospital button pressed")
+        
+        
+       
     }
-    */
+    
+    
+    
+    
+    
+    
 
 }

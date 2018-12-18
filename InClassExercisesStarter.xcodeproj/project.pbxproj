@@ -31,7 +31,7 @@
 		6CEA008621BED52A00E3644F /* bulbasaur.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6CEA008221BED52800E3644F /* bulbasaur.gif */; };
 		6CEA008721BED52A00E3644F /* squirtle.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6CEA008321BED52900E3644F /* squirtle.gif */; };
 		6CEA008921BF593900E3644F /* RunawayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA008821BF593900E3644F /* RunawayViewController.swift */; };
-		96D97E7921C6D9F6006EE62F /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D97E7821C6D9F6006EE62F /* HospitalViewController.swift */; };
+		6CFF81FA21C8AB10007DE5CB /* run.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6CFF81F921C8AB10007DE5CB /* run.gif */; };
 		A69A599BE3BB28B1BC051681 /* Pods_InClassExercisesStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6F1AC2E4150BE1AF3406D7 /* Pods_InClassExercisesStarter.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +64,8 @@
 		6CEA008221BED52800E3644F /* bulbasaur.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bulbasaur.gif; sourceTree = "<group>"; };
 		6CEA008321BED52900E3644F /* squirtle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = squirtle.gif; sourceTree = "<group>"; };
 		6CEA008821BF593900E3644F /* RunawayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunawayViewController.swift; sourceTree = "<group>"; };
+		6CFF81F921C8AB10007DE5CB /* run.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = run.gif; sourceTree = "<group>"; };
 		922D9DFDF5A7E8609903DE7F /* Pods-InClassExercisesStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InClassExercisesStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-InClassExercisesStarter/Pods-InClassExercisesStarter.release.xcconfig"; sourceTree = "<group>"; };
-		96D97E7821C6D9F6006EE62F /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,15 +110,15 @@
 				6CEA006821BC59DC00E3644F /* MapPokemonViewController.swift */,
 				6CEA007821BEC48700E3644F /* OpponentViewController.swift */,
 				6CEA007A21BEC95900E3644F /* FightViewController.swift */,
-				6CBF0F6B21C61A04004D6D30 /* CongoViewController.swift */,
 				6CEA008821BF593900E3644F /* RunawayViewController.swift */,
+				6CBF0F6B21C61A04004D6D30 /* CongoViewController.swift */,
 				6CEA007C21BECFDF00E3644F /* swift+gif.swift */,
 				057C2C3321A5D26E00221B22 /* Main.storyboard */,
-				96D97E7821C6D9F6006EE62F /* HospitalViewController.swift */,
 				057C2C3821A5D26E00221B22 /* LaunchScreen.storyboard */,
 				6CEA007E21BED0DB00E3644F /* pika.gif */,
 				6CEA007621BE033300E3644F /* go.gif */,
 				6CEA007421BE025800E3644F /* ball.png */,
+				6CFF81F921C8AB10007DE5CB /* run.gif */,
 				6CEA008221BED52800E3644F /* bulbasaur.gif */,
 				6CBF0F6921C6198C004D6D30 /* congro.gif */,
 				6CEA008121BED52600E3644F /* charmander.gif */,
@@ -217,6 +217,7 @@
 				6CEA007521BE025900E3644F /* ball.png in Resources */,
 				6CEA005B21B9ACB500E3644F /* GoogleService-Info.plist in Resources */,
 				6CEA008421BED52A00E3644F /* eevee.gif in Resources */,
+				6CFF81FA21C8AB10007DE5CB /* run.gif in Resources */,
 				6CEA006721BA454100E3644F /* Assets.xcassets in Resources */,
 				6CBF0F6A21C6198D004D6D30 /* congro.gif in Resources */,
 				6CEA007721BE033300E3644F /* go.gif in Resources */,
@@ -297,7 +298,6 @@
 			files = (
 				6CEA005D21BA035D00E3644F /* LoginViewController.swift in Sources */,
 				057C2C3021A5D26E00221B22 /* AppDelegate.swift in Sources */,
-				96D97E7921C6D9F6006EE62F /* HospitalViewController.swift in Sources */,
 				6CEA005F21BA09A400E3644F /* SelectPokemonTableViewController.swift in Sources */,
 				6CBF0F6C21C61A07004D6D30 /* CongoViewController.swift in Sources */,
 				6CEA006321BA131500E3644F /* SignUpViewController.swift in Sources */,

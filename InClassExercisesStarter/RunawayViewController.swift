@@ -21,22 +21,33 @@ class RunawayViewController: UIViewController {
     @IBOutlet weak var Money: UILabel!
     @IBOutlet weak var Health: UILabel!
     
+    @IBOutlet weak var runImage: UIImageView!
     
-    @IBAction func healPokemon(_ sender: Any) {
-        print("hospital button pressed")
-        print("Get Data pressed!")
+    
+    @IBOutlet weak var pokemonName: UILabel!
+    
         
         
+    @IBAction func mainMenuButton(_ sender: Any) {
         
-        
-        
-        
+        self.performSegue(withIdentifier: "menu", sender: nil)
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        
+        
+        print("Loaded the runaway screen")
+        self.runImage.loadGif(name: "run")
+        
+        
+        
+        
+        
+        
     }
     
 

@@ -15,6 +15,8 @@ class CongoViewController: UIViewController {
     @IBOutlet weak var imageCongo: UIImageView!
     
     @IBAction func level2(_ sender: Any) {
+        
+        print("Play level 2 button pressed")
     }
     
     @IBAction func mainMenu(_ sender: Any) {
