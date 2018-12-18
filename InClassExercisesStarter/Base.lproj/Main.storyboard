@@ -903,6 +903,7 @@
         <image name="zoomout" width="75" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="lBa-za-w8w"/>
         <segue reference="a9i-1X-yxn"/>
         <segue reference="YIi-GL-gDT"/>
     </inferredMetricsTieBreakers>

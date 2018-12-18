@@ -133,7 +133,7 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "attack2": 28,
             "attack3": 21,
             "level":1,
-            "money":40
+            "money":100
             ])
         pokemon.document("Pikachu").setData([
             "name": "Pikachu",
@@ -153,7 +153,7 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "attack2": 28,
             "attack3": 11,
             "level":1,
-            "money":90
+            "money":100
             ])
         pokemon.document("Charmander").setData([
             "name": "Charmander",
@@ -163,7 +163,7 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "attack2": 28,
             "attack3": 24,
             "level":1,
-            "money":180
+            "money":100
             
             ])
         pokemon.document("Balbasaur").setData([
@@ -174,7 +174,7 @@ class SelectPokemonTableViewController: UITableViewController,CLLocationManagerD
             "attack2": 18,
             "attack3": 23,
             "level":1,
-            "money":110
+            "money":100
             ])
     }
     //    func  UserData() {

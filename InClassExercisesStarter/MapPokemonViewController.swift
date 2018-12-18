@@ -64,6 +64,10 @@ class MapPokemonViewController: UIViewController, MKMapViewDelegate, CLLocationM
         
     }
     override func viewDidLoad() {
+        
+        self.navigationItem.title = "Select your Enemy"
+        
+        
         super.viewDidLoad()
         db = Firestore.firestore()
         self.mapView.delegate = self

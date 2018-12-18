@@ -59,6 +59,8 @@ class FightViewController: UIViewController {
     var r = 0
     var bc = ""
     
+     //var n = up
+    
     
     var cpuattack1Count = 0
     var cpuattack2Count = 0
@@ -84,6 +86,7 @@ class FightViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        self.navigationItem.title = "Fight Screen"
         print("Loaded the fight screen")
         print("________________________")
         super.viewDidLoad()
@@ -477,22 +480,83 @@ class FightViewController: UIViewController {
     
     
     @IBAction func hospitalButton(_ sender: Any) {
+        var  pikauser = UserDefaults.standard.string(forKey: "userpoke")
         
+    
+        
+        var up = pikauser as! String
+        var n = up
         print("Hospital button pressed")
+        userhealthPointCount = userhealthPointCount + 100
         
-        if (userhealthPointCount <= 0){
-            let message = "Your Health Point is 0. Hence you are in Hospital."
-            let infoAlert = UIAlertController(title: "You can gain HP in Hospital!", message: message, preferredStyle: .alert)
-            infoAlert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-            self.present(infoAlert, animated: true, completion: nil)
-            Result.text = "Yout are in Hospital now."
+        
+        
+        
+        
+        let ref = db.collection("Pokemon").whereField("name", isEqualTo: n)
+        ref.getDocuments() {
+            (querySnapshot, err) in
+            if (err == nil){
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    var money = data["money"] as! Int
+                    
+                    
+                    //money = money - 50
+                }
+            }
         }
-        else{
-            var ab = (cpuhealthPointCount - userattack1Count) + cpudefenceCount
-            self.cpuhealthPointCount = ab
-            print("CPU health: " , ab)
-            cpuLabelBar.text = String(ab)
-            enemyfight()
+        
+        
+        
+        
+        
+        
+        
+        money = 100
+        print("Money before",self.money)
+        money = 50
+        //money = money - 50
+        
+        
+        
+        
+        let user = db.collection("Pokemon").document(n).updateData([
+            "Health Point" : userhealthPointCount,
+            "money" : money
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Health Point Now",self.userhealthPointCount)
+                print("Money Now",self.money)
+                
+            }
+        }
+        
+        
+        
+        let alert = UIAlertController(title: "HOSPITAL", message: "Updating Health...", preferredStyle: .alert)
+        
+        alert.view.tintColor = UIColor.black
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 10,y: 5,width: 50, height: 50)) as UIActivityIndicatorView
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        
+        self.present(alert, animated: true) {
+            self.dismiss(animated: true, completion: {
+                let message = "Health Point updated to \(self.userhealthPointCount)"
+                let alert2 = UIAlertController(title: "HEALTH LEVEL", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                alert2.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert2, animated: true, completion: nil)
+            })
+        }
+        
+        
+       
         }
     
     }
@@ -503,4 +567,4 @@ class FightViewController: UIViewController {
     
     
 
-}
+

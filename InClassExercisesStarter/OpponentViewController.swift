@@ -35,6 +35,8 @@ class OpponentViewController: UIViewController, CLLocationManagerDelegate{
     
 
     override func viewDidLoad() {
+        
+        self.navigationItem.title = "Opponent"
         super.viewDidLoad()
         db = Firestore.firestore()
         

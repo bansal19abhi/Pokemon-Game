@@ -168,6 +168,7 @@ class PokeDetailsViewController: UIViewController,CLLocationManagerDelegate {
             "longitude": longitude,
             "pokemon": self.pokemonName ?? "Meon",
             "icon": self.rowImage
+            
             ])
     }
     
